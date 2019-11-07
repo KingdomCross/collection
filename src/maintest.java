@@ -6,10 +6,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.TreeMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class maintest {
     public static void main(String[] args) {
@@ -25,15 +22,27 @@ public class maintest {
         long time1, time2;
         time1=System.currentTimeMillis();
 
+        try {
+            PrintWriter out = new PrintWriter("Scrabble.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
         Scanner in = null;
         try {
             in = new Scanner(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         if (in != null) {
             while (in.hasNext()) {
-                System.out.println(in.nextLine());
+                //System.out.println(in.nextLine());
+                hashMap.put("q", in.nextLine()); //hashmap
+                Set<String> keySet = hashMap.keySet();  for (String key : keySet)
+                {
+                    String value = hashMap.get(key);  System.out.println(key + " : " + value);
+                }
             }
         }
 
