@@ -35,16 +35,17 @@ public class maintest {
             e.printStackTrace();
         }
 
+
         if (in != null) {
             while (in.hasNext()) {
-                //System.out.println(in.nextLine());
-                hashMap.put("q", in.nextLine()); //hashmap
+                hashMap.put(in.nextLine(), "q"); //hashmap
                 Set<String> keySet = hashMap.keySet();  for (String key : keySet)
                 {
                     String value = hashMap.get(key);  System.out.println(key + " : " + value);
                 }
             }
         }
+        System.out.println(hashMap);
 
         time2=System.currentTimeMillis();
         System.out.println("Time for the operation is: " + (time2-time1));
