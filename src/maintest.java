@@ -40,10 +40,12 @@ public class maintest {
         }
 
 
+        int i = 0;
         if (in != null) {
             while (in.hasNext()) {
                 //System.out.println(in.nextLine());
-                hashMap.put(in.nextLine(), "q"); //hashmap
+                i++;
+                hashMap.put(in.nextLine(), String.valueOf(i)); //hashmap
             }
         }
 
