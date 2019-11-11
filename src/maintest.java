@@ -3,9 +3,7 @@
   Project Collection
  */
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 
 public class maintest {
@@ -16,17 +14,23 @@ public class maintest {
             System.exit(0);
         }
 
+        /*try {
+            FileReader fileReader = new FileReader("QWords.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }*/
+
         Map<String, String> hashMap = new HashMap<>();
         Map<String, String> treeMap = new TreeMap<>();
 
         long time1, time2;
         time1=System.currentTimeMillis();
 
-        try {
+        /*try {
             PrintWriter out = new PrintWriter("Scrabble.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
+        }*/
 
         Scanner in = null;
         try {
@@ -38,13 +42,16 @@ public class maintest {
 
         if (in != null) {
             while (in.hasNext()) {
+                //System.out.println(in.nextLine());
                 hashMap.put(in.nextLine(), "q"); //hashmap
-                Set<String> keySet = hashMap.keySet();  for (String key : keySet)
-                {
-                    String value = hashMap.get(key);  System.out.println(key + " : " + value);
-                }
             }
         }
+
+        Set<String> keySet = hashMap.keySet();  for (String key : keySet)
+        {
+            String value = hashMap.get(key);  System.out.println(key + " : " + value);
+        }
+
         System.out.println(hashMap);
 
         time2=System.currentTimeMillis();
