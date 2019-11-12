@@ -17,6 +17,7 @@ public class Part2Test {
 		 * Instantiating the variables
 		 */
 		String searchword = "Alice";
+		double Time2;
 		double Time;
 		int found = 0;
 		Scanner sc = null;
@@ -32,7 +33,7 @@ public class Part2Test {
 		if(args.length == 0)
 		{
 			System.out.println("Using TreeSet");
-
+			Time = System.currentTimeMillis();
 			TreeSet<String> Tree = new TreeSet<>();
 			if (sc != null) {
 				while (sc.hasNext()){
@@ -44,8 +45,8 @@ public class Part2Test {
 			   if (Tree.contains(searchword))
 				  found ++;
 			}
-			Time = System.currentTimeMillis();
-			System.out.println("Search time :" + Time);
+			Time2 = System.currentTimeMillis();
+			System.out.println("Search time :" + (Time2-Time));
 			System.out.println("Number of times word " + searchword + " was found: " + found);
 		}
 		/*
@@ -55,6 +56,7 @@ public class Part2Test {
 			System.out.println("Using Hash Set");
 
 			HashSet<String> Hash = new HashSet<>();
+			Time = System.currentTimeMillis();
 		   if (sc != null) {
 			   while (sc.hasNext()){
 				   Hash.add(sc.next());
@@ -65,8 +67,8 @@ public class Part2Test {
 			   if (Hash.contains(searchword))
 				  found ++;
 			}
-			Time = System.currentTimeMillis();
-			System.out.println("Search time :" + Time);
+			Time2 = System.currentTimeMillis();
+			System.out.println("Search time :" + (Time2- Time));
 			System.out.println("Number of times word " + searchword + " was found: " + found);
 		}
 	}
