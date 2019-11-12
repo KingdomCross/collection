@@ -29,45 +29,45 @@ public class Part2Test {
 		/*
 		 * Reads the file and sorts it into  a TreeSet
 		 */
-		   if(args.length == 0)
-			{
-				System.out.println("Using TreeSet");
+		if(args.length == 0)
+		{
+			System.out.println("Using TreeSet");
 
-				TreeSet<String> Tree = new TreeSet<>();
-				if (sc != null) {
-					while (sc.hasNext()){
-						Tree.add(sc.next());
-					}
+			TreeSet<String> Tree = new TreeSet<>();
+			if (sc != null) {
+				while (sc.hasNext()){
+					Tree.add(sc.next());
 				}
-				//Searches for word
-				for (int i = 0; i<100; i++){
-				   if (Tree.contains(searchword))
-					  found ++;
-				}
-				Time = System.currentTimeMillis();
-				System.out.println("Search time :" + Time);
-				System.out.println("Number of times word " + searchword + " was found: " + found);
 			}
-		   /*
-			* Else statement does the same thing as a HashSet
-			*/
-		   else {
-				System.out.println("Using Hash Set");
+			//Searches for word
+			for (int i = 0; i<100; i++){
+			   if (Tree.contains(searchword))
+				  found ++;
+			}
+			Time = System.currentTimeMillis();
+			System.out.println("Search time :" + Time);
+			System.out.println("Number of times word " + searchword + " was found: " + found);
+		}
+		/*
+		* Else statement does the same thing as a HashSet
+		*/
+		else {
+			System.out.println("Using Hash Set");
 
-				HashSet<String> Hash = new HashSet<>();
-			   if (sc != null) {
-				   while (sc.hasNext()){
-					   Hash.add(sc.next());
-				   }
+			HashSet<String> Hash = new HashSet<>();
+		   if (sc != null) {
+			   while (sc.hasNext()){
+				   Hash.add(sc.next());
 			   }
-			   //Searches for word
-				for (int i = 0; i<100; i++){
-				   if (Hash.contains(searchword))
-					  found ++;
-				}
-				Time = System.currentTimeMillis();
-				System.out.println("Search time :" + Time);
-				System.out.println("Number of times word " + searchword + " was found: " + found);
+		   }
+		   //Searches for word
+			for (int i = 0; i<100; i++){
+			   if (Hash.contains(searchword))
+				  found ++;
+			}
+			Time = System.currentTimeMillis();
+			System.out.println("Search time :" + Time);
+			System.out.println("Number of times word " + searchword + " was found: " + found);
 		}
 	}
 }
