@@ -11,6 +11,8 @@ public class maintest {
         Hashclass hashclass = new Hashclass();
         System.out.println();
         TreeClass treeClass = new TreeClass();
+        System.out.println();
+        Alice alice = new Alice(args);
 
         /*Scramble scramble = new Scramble();
         File file = new File("QWords.txt"); //"table.txt"
