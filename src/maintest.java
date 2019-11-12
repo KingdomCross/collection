@@ -1,6 +1,8 @@
 /*
-  Alex Chheng and Chloe
-  Project Collection
+ * Authors: Chloe Culver and Alex Chheng
+ * Project Collections
+ * Input: takes the args given in the command and decides to make a TreeSet or HashSet from, the File
+ * OutPut: returns the Method used to search the txt, the time it took to search the file, and the number of times
  */
 
 import java.io.*;
@@ -13,19 +15,10 @@ public class maintest {
         TreeClass treeClass = new TreeClass();
         System.out.println();
         Alice alice = new Alice(args);
+        System.out.println();
 
-        /*Scramble scramble = new Scramble();
-        File file = new File("QWords.txt"); //"table.txt"
-        if (!file.exists()) {
-            System.out.println("File not exist");
-            System.exit(0);
-        }*/
-
-        /*Scanner in = null;
-        try {
-            in = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }*/
+        ScavengerArray scavengerArray = new ScavengerArray();
+        System.out.println();
+        ScavengerLinked scavengerLinked = new ScavengerLinked();
     }
 }

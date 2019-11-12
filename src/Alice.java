@@ -1,3 +1,8 @@
+/*
+ * Authors: Chloe Culver and Alex Chheng
+ * Input: takes the args given in the command and decides to make a TreeSet or HashSet from, the File
+ * OutPut: returns the Method used to search the txt, the time it took to search the file, and the number of times
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashSet;

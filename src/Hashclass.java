@@ -1,5 +1,7 @@
 /*
  * Authors: Chloe Culver and Alex Chheng
+ * Input: takes the args given in the command and decides to make a TreeSet or HashSet from, the File
+ * OutPut: returns the Method used to search the txt, the time it took to search the file, and the number of times
  */
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +11,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 class Hashclass {
-    Hashclass(){
+    Hashclass(){ //This is using hashmap method
         System.out.println("HashMap Method");
         Scramble scramble = new Scramble();
         File file = new File("QWords.txt"); //"table.txt"
@@ -48,9 +50,7 @@ class Hashclass {
             Integer value = hashMap.get(key);  System.out.println(key + " : " + value);
         }
 
-        System.out.println(hashMap);
-
-        time2=System.currentTimeMillis();
-        System.out.println("Time for the operation is: " + (time2-time1));
+        time2=System.currentTimeMillis(); //end time
+        System.out.println("Time for the operation is: " + (time2-time1)); //result time
     }
 }
