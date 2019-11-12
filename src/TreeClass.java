@@ -1,16 +1,10 @@
-/*
- * Authors: Chloe Culver and Alex Chheng
- */
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
-class Hashclass {
-    Hashclass(){
-        System.out.println("HashMap Method");
+class TreeClass {
+    TreeClass(){
+        System.out.println("TreeMap Method");
         Scramble scramble = new Scramble();
         File file = new File("QWords.txt"); //"table.txt"
         if (!file.exists()) {
@@ -25,7 +19,7 @@ class Hashclass {
             e.printStackTrace();
         }
 
-        Map<String, Integer> hashMap = new HashMap<>();
+        Map<String, Integer> treeMap = new TreeMap<>();
         long time1, time2;
         time1=System.currentTimeMillis();
 
@@ -38,17 +32,17 @@ class Hashclass {
                     //System.out.println(scramble.Score(tempNext.charAt(j)));
                     total += scramble.Score(tempNext.charAt(j));
                 }
-                hashMap.put(tempNext, total); //hashmap
+                treeMap.put(tempNext, total); //hashmap
                 total = 0;
             }
         }
 
-        Set<String> keySet = hashMap.keySet();  for (String key : keySet)
+        Set<String> keySet = treeMap.keySet();  for (String key : keySet)
         {
-            Integer value = hashMap.get(key);  System.out.println(key + " : " + value);
+            Integer value = treeMap.get(key);  System.out.println(key + " : " + value);
         }
 
-        System.out.println(hashMap);
+        System.out.println(treeMap);
 
         time2=System.currentTimeMillis();
         System.out.println("Time for the operation is: " + (time2-time1));

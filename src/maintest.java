@@ -9,13 +9,15 @@ import java.util.*;
 public class maintest {
     public static void main(String[] args) {
         Hashclass hashclass = new Hashclass();
+        System.out.println();
+        TreeClass treeClass = new TreeClass();
 
-        Scramble scramble = new Scramble();
+        /*Scramble scramble = new Scramble();
         File file = new File("QWords.txt"); //"table.txt"
         if (!file.exists()) {
             System.out.println("File not exist");
             System.exit(0);
-        }
+        }*/
 
         /*Scanner in = null;
         try {
@@ -23,13 +25,5 @@ public class maintest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }*/
-
-        Map<String, Integer> treeMap = new TreeMap<>();
-
-        long time1, time2;
-        time1=System.currentTimeMillis();
-
-        time2=System.currentTimeMillis();
-        System.out.println("Time for the operation is: " + (time2-time1));
     }
 }
