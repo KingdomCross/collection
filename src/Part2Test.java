@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeSet;
-import java.io.*;
-import java.util.*;
 
 public class Part2Test {
 
